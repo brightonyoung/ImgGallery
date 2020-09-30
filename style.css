@@ -1,0 +1,91 @@
+body {
+    background: black;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+
+.column {
+    flex: 24%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+@media screen and (max-width: 1024px) {
+    .column {
+      flex: 48%;
+      max-width: 51%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  #byebye:hover {
+      animation-name: spin;
+      animation-duration: 2s;;
+  }
+
+  @keyframes spin {
+    from {
+              transform: scaleX(0);
+    }
+    to {
+              transform: scaleX(1);
+    }
+  }
