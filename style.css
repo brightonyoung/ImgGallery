@@ -45,7 +45,8 @@ body {
     display: block;
     width: 100%;
     height: auto;
-  }
+    animation: greyscale-fade-in 8s ease-in forwards;
+   }
   
   .overlay {
     position: absolute;
@@ -63,7 +64,7 @@ body {
   .container:hover .overlay {
     opacity: 1;
     cursor: pointer;
-  }
+    }
   
   .text {
     color: white;
@@ -97,7 +98,7 @@ body {
 
   #byebye:hover {
       animation-name: spin;
-      animation-duration: 2s;;
+      animation-duration: 2s;
   }
 
   @keyframes spin {
@@ -109,3 +110,7 @@ body {
     }
   }
 
+  @keyframes greyscale-fade-in {
+    0%   { -webkit-filter: grayscale(100%); }
+    100% { -webkit-filter: grayscale(0%); }
+}
